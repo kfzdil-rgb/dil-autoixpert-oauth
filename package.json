@@ -1,18 +1,24 @@
 {
   "name": "dil-autoixpert-oauth",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "private": true,
-  "type": "module",
   "scripts": {
     "deploy": "wrangler deploy",
-    "dev": "wrangler dev"
+    "dev": "wrangler dev",
+    "start": "wrangler dev",
+    "cf-typegen": "wrangler types",
+    "type-check": "tsc --noEmit"
   },
   "dependencies": {
-    "@modelcontextprotocol/sdk": "^1.17.5",
-    "agents": "^0.2.29",
-    "zod": "^3.25.76"
+    "@cloudflare/workers-oauth-provider": "^0.8.1",
+    "agents": "^0.17.1",
+    "hono": "^4.12.27",
+    "just-pick": "^4.2.0",
+    "zod": "^4.4.3"
   },
   "devDependencies": {
-    "wrangler": "^4.33.1"
+    "@cloudflare/workers-types": "^4.20260628.1",
+    "typescript": "6.0.3",
+    "wrangler": "^4.105.0"
   }
 }
